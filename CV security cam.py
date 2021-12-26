@@ -16,7 +16,7 @@ while cam.isOpened():
     contours,_= cv2.findContours(dilated,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
     for c in contours:
         if cv2.contourArea(c)<5000:
-        print("motion detected")
+            print("motion detected")
             continue
         x,y,w,h = cv2.boundingRect(c)
         #x,y are points w,h are width and hieght
